@@ -39,7 +39,7 @@ const modelUrls = ref([])
 
 onMounted(async () => {
   try {
-    const res = await fetch('http://localhost:3000/models')
+    const res = await fetch('/models')
     const contentType = res.headers.get('content-type')
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
     if (!contentType || !contentType.includes('application/json')) {

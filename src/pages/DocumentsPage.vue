@@ -29,7 +29,7 @@ const documentsStore = useModelStore()
 
 onMounted(async () => {
   try {
-    const res = await fetch('http://localhost:3000/documents')
+    const res = await fetch('/documents')
     const urls = await res.json()
     documentsStore.setDocuments(urls)
   } catch (err) {
